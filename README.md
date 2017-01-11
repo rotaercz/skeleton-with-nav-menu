@@ -1,2 +1,2 @@
 # skeleton-with-menu
-Bare bone minimum skeleton boilerplate with my minimal responsive menu
+Bare bone minimum skeleton plus my minimal responsive menu
