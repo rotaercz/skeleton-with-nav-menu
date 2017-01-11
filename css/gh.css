@@ -1,0 +1,78 @@
+body {
+	padding-top: 56px;
+}
+
+.nav-show {
+	top: 0;
+}
+
+.nav-hide {
+    top: -56px;
+}
+
+/* Remove margins and padding from the list, and add a black background color */
+ul.topnav {
+	position: fixed;
+	width: 100%;
+	z-index: 10000;
+	transition: top 0.2s ease-in-out;
+	
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	background-color: #fff;
+	border-bottom: 1px solid #dcdcdc;
+}
+
+/* Float the list items side by side */
+ul.topnav li {float: left;}
+
+/* Style the links inside the list items */
+ul.topnav li a {
+	display: inline-block;
+	color: #757575;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+	transition: 0.2s;
+	font-size: 1.7rem;
+}
+
+/* Change background color of links on hover */
+ul.topnav li a:hover {background-color: #eee;}
+
+/* Hide the list item that contains the link that should open and close the topnav on small screens */
+ul.topnav li.icon {display: none;}
+
+ul.topnav li.right {float: right;}
+
+/* When the screen is less than 680 pixels wide, hide all list items, except for the first one ("Home"). Show the list item that contains the link to open and close the topnav (li.icon) */
+@media screen and (max-width:880px) {
+	ul.topnav li:not(:first-child) {display: none;}
+	ul.topnav li.icon {
+		float: right;
+		display: inline-block;
+	}
+}
+
+/* The "mobile" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens */
+@media screen and (max-width:880px) {
+	ul.topnav.mobile { /* position: relative; */ }
+	ul.topnav.mobile li.icon {
+		position: absolute;
+		right: 0;
+		top: 0;
+	}
+	ul.topnav.mobile li {
+		float: none;
+		display: inline;
+	}
+	ul.topnav.mobile li a {
+		display: block;
+		text-align: left;
+	}
+	ul.topnav.mobile li.right {
+		float: none;
+	}
+}
