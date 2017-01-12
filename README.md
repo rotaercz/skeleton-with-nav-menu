@@ -3,5 +3,5 @@ Bare bone minimum skeleton boilerplate with my minimal responsive navigation men
 
 - supports sub-menus
 - hide/show navigation menu when user scrolls for extra screen real-estate
-
+- Navigation UI adjusts based on screen width
 
