@@ -1,4 +1,4 @@
 # skeleton-with-menu
-Bare bone minimum skeleton boilerplate with my minimal responsive menu
+Bare bone minimum skeleton boilerplate with my minimal responsive navigation menu.
 
-Supports submenus
+Added support for sub-menus
