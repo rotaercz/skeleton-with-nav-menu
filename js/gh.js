@@ -1,19 +1,19 @@
 // toggle mobile navigation
-function toggleNav() {
-	if( $("#nav").hasClass("mobile") ) {
-		$("#nav").removeClass("mobile");
+function toggleMobileNav() {
+	if( $("nav").hasClass("mobile") ) {
+		$("nav").removeClass("mobile");
 	}
 	else {
-		$("#nav").addClass("mobile");
+		$("nav").addClass("mobile");
 	}
 }
 
 // hide mobile nav when clicking outside of nav area
 $("html").click(function() {
-	$("#nav").removeClass("mobile");
+	$("nav").removeClass("mobile");
 });
 
-$("#nav").click(function(e){
+$("nav").click(function(e){
     e.stopPropagation();
 });
 
@@ -21,7 +21,7 @@ $("#nav").click(function(e){
 var scrolled = false;
 var lastScrollTop = 0;
 var delta = 5;
-var navbarHeight = $("#nav").outerHeight();
+var navbarHeight = $("nav").outerHeight();
 
 $(window).scroll(function(event){
     scrolled = true;
@@ -41,13 +41,16 @@ function hasScrolled() {
         return;
     
     if (st > lastScrollTop && st > navbarHeight) {
-		$("#nav").removeClass("mobile").removeClass("nav-show").addClass("nav-hide");
+		if( !$("nav").hasClass("mobile") ) {
+			$("nav").removeClass("nav-show").addClass("nav-hide");
+		}
     } 
 	else {
         if(st + $(window).height() < $(document).height()) {
-            $("#nav").removeClass("nav-hide").addClass("nav-show");
+            $("nav").removeClass("nav-hide").addClass("nav-show");
         }
     }
     
     lastScrollTop = st;
 }
+
